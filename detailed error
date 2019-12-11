@@ -1,0 +1,67 @@
+MovingBeamScript.f90:1:2:
+
+    1 | #!/bin/bash
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:2:2:
+
+    2 | #SBATCH --time=36:00:00   # walltime limit (HH:MM:SS)
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:3:2:
+
+    3 | #SBATCH --nodes=8   # number of nodes
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:4:2:
+
+    4 | #SBATCH --ntasks-per-node=16   # 16 processor core(s) per node
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:5:2:
+
+    5 | #SBATCH --job-name="Test"
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:6:2:
+
+    6 | #SBATCH --mail-user=ISUusername@iastate.edu   # email address
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:7:2:
+
+    7 | #SBATCH --mail-type=BEGIN
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:8:2:
+
+    8 | #SBATCH --mail-type=END
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:9:2:
+
+    9 | #SBATCH --mail-type=FAIL
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:10:2:
+
+   10 | #SBATCH --output="Test.out" # job standard output file (%j replaced by job id)
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:11:2:
+
+   11 | #SBATCH --error="Test.errors" # job standard error file (%j replaced by job id)
+      |  1
+Warning: Illegal preprocessor directive
+MovingBeamScript.f90:13:0:
+
+   13 | module load intel
+      | 
+Error: Unclassifiable statement at (1)
+MovingBeamScript.f90:15:132:
+
+   15 | mpiifort -O3 -ipo -no-prec-div -fp-model fast=2 -xHost ParallelInitialization.f90 Parameters.f90 D2Q9.f90 TLBFDInit.f90 SolidificationInit.f90 LBFluidFlow.f90 LBFDHeatFlow.f90 Nucleationandgrowth.f90 DecenteredSquare.f90 GhostNodes.f90 PrintOutput.f90 Multilayer.f90 TLBCA_MovingMain.f90
+      |                                                                                                                                    1
+Error: Line truncated at (1) [-Werror=line-truncation]
+f951: Error: Unexpected end of file in 'MovingBeamScript.f90'
+f951: some warnings being treated as errors
